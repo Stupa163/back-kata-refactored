@@ -1,5 +1,11 @@
 <?php
 
+namespace src\Repository;
+
+use Faker\Factory;
+use src\Entity\Destination;
+use src\Helper\SingletonTrait;
+
 class DestinationRepository implements Repository
 {
     use SingletonTrait;
@@ -13,7 +19,7 @@ class DestinationRepository implements Repository
     {
         // DO NOT MODIFY THIS METHOD
 
-        $faker = Faker\Factory::create();
+        $faker = Factory::create();
         $faker->seed($id);
 
         return new Destination(

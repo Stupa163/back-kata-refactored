@@ -1,5 +1,7 @@
 <?php
 
+namespace src\Entity;
+
 class Site
 {
     public $id;

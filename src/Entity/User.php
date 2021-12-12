@@ -1,5 +1,7 @@
 <?php
 
+namespace src\Entity;
+
 class User
 {
     public $id;
