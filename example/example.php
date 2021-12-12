@@ -28,11 +28,15 @@ www.evaneos.com
 ");
 $templateManager = new TemplateManager();
 
-$message = $templateManager->getTemplateComputed(
-    $template,
-    [
-        'quote' => new Quote($faker->randomNumber(), $faker->randomNumber(), $faker->randomNumber(), $faker->date())
-    ]
-);
+try {
+    $message = $templateManager->getTemplateComputed(
+        $template,
+        [
+            'quote' => new Quote($faker->randomNumber(), $faker->randomNumber(), $faker->randomNumber())
+        ]
+    );
 
-echo $message->subject . "\n" . $message->content;
+    echo $message->getSubject() . "\n" . $message->getContent();
+} catch (Exception $e) {
+    echo "An error occured during the rendering of the template : {$e->getMessage()}";
+}
