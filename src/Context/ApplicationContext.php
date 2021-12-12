@@ -15,7 +15,7 @@ class ApplicationContext
     protected function __construct()
     {
         $faker = Factory::create();
-        $this->currentUser = new User($faker->randomNumber(), $faker->firstName, $faker->lastName, $faker->email);
+        $this->currentUser = new User($faker->randomNumber(), $faker->firstName);
     }
 
     public function getCurrentUser(): User

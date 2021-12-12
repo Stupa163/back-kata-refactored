@@ -4,16 +4,35 @@ namespace src\Entity;
 
 class User
 {
-    public $id;
-    public $firstname;
-    public $lastname;
-    public $email;
+    private int $id;
+    private string $firstname;
 
-    public function __construct($id, $firstname, $lastname, $email)
+    public function __construct(int $id, string $firstname)
     {
         $this->id = $id;
         $this->firstname = $firstname;
-        $this->lastname = $lastname;
-        $this->email = $email;
+    }
+
+    public function setId(int $id): self
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    public function setFirstname(string $firstname): self
+    {
+        $this->firstname = $firstname;
+        return $this;
+    }
+
+    public function getFirstname(): string
+    {
+        return $this->firstname;
     }
 }
