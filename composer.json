@@ -1,7 +1,8 @@
 {
     "require": {
         "php": "^8.0",
-        "fakerphp/faker": "^1.17"
+        "fakerphp/faker": "^1.17",
+        "ext-mbstring": "*"
     },
     "autoload": {
         "psr-4": {
