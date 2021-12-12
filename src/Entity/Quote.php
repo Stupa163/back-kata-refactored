@@ -2,39 +2,26 @@
 
 namespace src\Entity;
 
-class Quote
+class Quote extends Entity
 {
-    private int $id;
     private int $siteId;
     private int $destinationId;
 
     public function __construct(int $id, int $siteId, int $destinationId)
     {
-        $this->id = $id;
+        parent::__construct($id);
         $this->siteId = $siteId;
         $this->destinationId = $destinationId;
     }
 
-    public static function renderHtml(self $quote): string
+    public function __toString(): string
     {
-        return '<p>' . $quote->id . '</p>';
+        return (string) $this->id;
     }
 
-    public static function renderText(self $quote): string
+    public function renderHtml(): string
     {
-        return (string) $quote->id;
-    }
-
-    public function setId(int $id): self
-    {
-        $this->id = $id;
-
-        return $this;
-    }
-
-    public function getId(): int
-    {
-        return $this->id;
+        return '<p>' . $this->id . '</p>';
     }
 
     public function setSiteId(int $siteId): self

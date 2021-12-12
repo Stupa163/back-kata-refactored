@@ -2,29 +2,16 @@
 
 namespace src\Entity;
 
-class Template
+class Template extends Entity
 {
-    private int $id;
     private string $subject;
     private string $content;
 
     public function __construct(int $id, string $subject, string $content)
     {
-        $this->id = $id;
+        parent::__construct($id);
         $this->subject = $subject;
         $this->content = $content;
-    }
-
-    public function setId(int $id): self
-    {
-        $this->id = $id;
-
-        return $this;
-    }
-
-    public function getId(): int
-    {
-        return $this->id;
     }
 
     public function setSubject(string $subject): self

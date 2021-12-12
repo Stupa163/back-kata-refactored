@@ -2,7 +2,9 @@
 
 namespace src\Repository;
 
+use src\Entity\Entity;
+
 interface Repository
 {
-    public function getById(int $id);
+    public function getById(int $id): Entity;
 }

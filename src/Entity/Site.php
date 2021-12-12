@@ -2,17 +2,15 @@
 
 namespace src\Entity;
 
-class Site
+class Site extends Entity
 {
-    private int $id;
     private string $url;
 
     public function __construct(int $id, string $url)
     {
-        $this->id = $id;
+        parent::__construct($id);
         $this->url = $url;
     }
-
     public function setId(int $id): self
     {
         $this->id = $id;
