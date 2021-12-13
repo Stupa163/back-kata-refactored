@@ -26,16 +26,10 @@ Bien cordialement,
 L'équipe Evaneos.com
 www.evaneos.com
 ");
-$templateManager = new TemplateManager();
 
 try {
-    $message = $templateManager->getTemplateComputed(
-        $template,
-        [
-            'quote' => new Quote($faker->randomNumber(), $faker->randomNumber(), $faker->randomNumber())
-        ]
-    );
-
+    $templateManager = new TemplateManager(new Quote($faker->randomNumber(), $faker->randomNumber(), $faker->randomNumber()));
+    $message = $templateManager->getTemplateComputed($template);
     echo $message->getSubject() . "\n" . $message->getContent();
 } catch (Exception $e) {
     echo "An error occured during the rendering of the template : {$e->getMessage()}";
