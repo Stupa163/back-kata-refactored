@@ -1,6 +1,6 @@
 <?php
 
-namespace src\Entity;
+namespace App\src\Entity;
 
 class Destination extends Entity
 {

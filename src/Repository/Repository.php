@@ -1,8 +1,8 @@
 <?php
 
-namespace src\Repository;
+namespace App\src\Repository;
 
-use src\Entity\Entity;
+use App\src\Entity\Entity;
 
 interface Repository
 {

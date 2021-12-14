@@ -7,9 +7,9 @@ if (!file_exists(__DIR__ . '/../vendor/autoload.php')) {
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Faker\Factory;
-use src\Entity\Quote;
-use src\Entity\Template;
-use src\TemplateManager;
+use App\src\Entity\Quote;
+use App\src\Entity\Template;
+use App\src\TemplateManager;
 
 $faker = Factory::create();
 

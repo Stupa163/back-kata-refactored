@@ -1,6 +1,6 @@
 <?php
 
-namespace src\Helper;
+namespace App\src\Helper;
 
 use PHPUnit\Framework\MockObject\MockObject;
 use Prophecy\Exception\Doubler\MethodNotFoundException;

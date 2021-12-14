@@ -1,6 +1,6 @@
 <?php
 
-namespace src\Helper;
+namespace App\src\Helper;
 
 trait SingletonTrait
 {

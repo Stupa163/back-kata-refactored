@@ -1,10 +1,10 @@
 <?php
 
-namespace src\Context;
+namespace App\src\Context;
 
 use Faker\Factory;
-use src\Entity\User;
-use src\Helper\SingletonTrait;
+use App\src\Entity\User;
+use App\src\Helper\SingletonTrait;
 
 class ApplicationContext
 {

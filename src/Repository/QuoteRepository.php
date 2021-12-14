@@ -1,10 +1,10 @@
 <?php
 
-namespace src\Repository;
+namespace App\src\Repository;
 
 use Faker\Factory;
-use src\Entity\Quote;
-use src\Helper\SingletonTrait;
+use App\src\Entity\Quote;
+use App\src\Helper\SingletonTrait;
 
 class QuoteRepository implements Repository
 {

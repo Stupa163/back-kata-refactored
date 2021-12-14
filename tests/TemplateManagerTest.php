@@ -2,16 +2,16 @@
 
 use PHPUnit\Framework\TestCase;
 use Prophecy\Exception\Doubler\MethodNotFoundException;
-use src\Entity\Destination;
-use src\Entity\Quote;
-use src\Entity\Site;
-use src\Entity\Template;
-use src\Entity\User;
-use src\Exceptions\InconsistentReplacementArrayException;
-use src\Helper\ReflectionTrait;
-use src\Repository\DestinationRepository;
-use src\Repository\SiteRepository;
-use src\TemplateManager;
+use App\src\Entity\Destination;
+use App\src\Entity\Quote;
+use App\src\Entity\Site;
+use App\src\Entity\Template;
+use App\src\Entity\User;
+use App\src\Exceptions\InconsistentReplacementArrayException;
+use App\src\Helper\ReflectionTrait;
+use App\src\Repository\DestinationRepository;
+use App\src\Repository\SiteRepository;
+use App\src\TemplateManager;
 
 class TemplateManagerTest extends TestCase
 {
